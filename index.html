@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <table>
+        <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+
+            <tr>
+                <th>
+                    <label>ID</label>
+                    <label class="validation-error hide" id="idValidationError">This field is required.</label>
+                    <label class="validation-error hide" id="idValidationErrorlimit">This field is required limit.</label>
+
+                </th>
+                <th>
+                    <label> Name</label>
+                    <label class="validation-error hide" id="nameValidationError">This field is required.</label>
+
+                </th>
+                <th>
+                    <label>Age</label><label class="validation-error hide" id="ageValidationError">This field is required.</label> <label class="validation-error hide" id="ageValidationErrorLimit">age must be between 18 to 60</label>
+
+                </th>
+                <th>
+                    <label>Gender</label>
+                    <label class="validation-error hide" id="genderValidationError">This field is required.</label>
+
+                </th>
+                <th>
+
+                </th>
+
+            </tr>
+            <tr>
+                <td>
+                    
+
+                        <input type="number" name="id" id="id" placeholder="Enter ID">
+                    
+                </td>
+                <td>
+                    
+                        <input type="text" name="name" id="name" placeholder="Enter name">
+                    
+                </td>
+                <td>
+                    
+                        <input type="number" name="age" id="age" placeholder="Enter Age" >
+                
+                </td>
+                <td>
+                    
+                    <select  name="gender" id="gender">
+                        <option value="" selected>Choose...</option>
+                        <option value="male" >Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="ADD" >
+                    </div>
+
+                </td>
+        </tr>
+    </form>
+
+        </table>
+        <div style="text-align: center; font-size: 20px; font-weight: 800;">
+            <h2> Employee List</h2>
+        </div>
+
+        <div class="list-wrap">
+            <table class="list" id="employeeList">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        
+
+        </div>
+                   
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
